@@ -12,7 +12,7 @@ path = os.getcwd()
 UPLOAD_FOLDER = os.path.join(path, '/app/uploads')
 VAR1 = os.getenv('var1')
 HOSTNAME = os.environ.get('HOSTNAME')
-SUCCESSMSG = 'File successfully uploaded from host ' + HOSTNAME + 'by var1=' + VAR1 
+SUCCESSMSG = 'File successfully uploaded to containe hostname ' + HOSTNAME + ' with var1= ' + VAR1 
 
 if not os.path.isdir(UPLOAD_FOLDER):
     os.mkdir(UPLOAD_FOLDER)
