@@ -11,7 +11,8 @@ path = os.getcwd()
 # file Upload
 UPLOAD_FOLDER = os.path.join(path, '/app/uploads')
 VAR1 = os.getenv('var1')
-HOSTNAME = os.environ.get('hostname')
+HOSTNAME = os.environ.get('HOSTNAME')
+SUCCESSMSG = 'File successfully uploaded from host ' + HOSTNAME + 'by var1=' + VAR1 
 
 if not os.path.isdir(UPLOAD_FOLDER):
     os.mkdir(UPLOAD_FOLDER)
@@ -19,7 +20,7 @@ if not os.path.isdir(UPLOAD_FOLDER):
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 
-ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif', 'zip', 'tar'])
+ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif', 'zip', 'tar', 'exe', 'pptx', 'mp4'])
 
 
 def allowed_file(filename):
