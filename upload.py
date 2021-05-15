@@ -5,11 +5,13 @@ from werkzeug.utils import secure_filename
 app=Flask(__name__)
 
 app.secret_key = "secret key"
-app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
+#app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
 
 path = os.getcwd()
 # file Upload
 UPLOAD_FOLDER = os.path.join(path, '/app/uploads')
+VAR1 = os.getenv('var1')
+HOSTNAME = os.environ.get('hostname')
 
 if not os.path.isdir(UPLOAD_FOLDER):
     os.mkdir(UPLOAD_FOLDER)
