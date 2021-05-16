@@ -18,3 +18,7 @@ init-test-katacoda.sh
 
 Click Katacoda Dashboard tab for test upload file
 
+# Build Docker image
+```
+docker build -f ./docker/Dockerfile -t upload:1.0 .
+```
