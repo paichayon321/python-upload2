@@ -1,0 +1,15 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  labels:
+    app: upload
+  name: upload
+spec:
+  rules:
+  - host: 2886795296-80-kitek05.environments.katacoda.com
+    http:
+      paths:
+      - backend:
+          serviceName: upload
+          servicePort: 5000
+        path: /
