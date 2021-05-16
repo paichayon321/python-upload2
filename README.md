@@ -24,10 +24,19 @@ Click Katacoda Dashboard tab for test upload file
 ```
 docker build -f ./deployment/docker/Dockerfile -t upload:1.0 .
 
-docker run --privileged -p 30000:5000 --rm -ti -e var1="value1 - file nside container" upload:1.0
+# Run Docker Image
+Run container in foregound mode  (-ti)
+```
+docker run --privileged -p 30000:5000 --rm -ti -e var1="value1 - file inside container" upload:1.0
+```
 
+Run container in foregound mode (-ti) and map external folder to container (-v)
+```
 docker run --privileged -p 30000:5000 --rm -ti -e var1="value1 - file on external container" --volume "$(pwd)/uploads:/app/uploads" upload:1.0
+```
 
+Run container in background mode (-d) and map external folder to container (-v)
+```
 docker run --privileged -p 30000:5000 --rm -d --name upload -e var1="value1 - file on external container and run background" --volume "$(pwd)/uploads:/app/uploads" upload:1.0
 ```
 
