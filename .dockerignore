@@ -1,5 +1,3 @@
-k8s/
-docker/
-helm/
+deployment/
 init-test-katacoda.sh
 README.md
