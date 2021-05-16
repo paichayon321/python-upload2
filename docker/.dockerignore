@@ -1,3 +1,5 @@
-../k8s
-../docker
-../helm
+k8s/
+docker/
+helm/
+init-test-katacoda.sh
+README.md
