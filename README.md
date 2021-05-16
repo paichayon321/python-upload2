@@ -40,7 +40,11 @@ Run container in background mode (-d) and map external folder to container (--vo
 ```
 docker run --privileged -p 30000:5000 --rm -d --name upload -e var1="value1" - file on external container and run background" --volume "$(pwd)/uploads:/app/uploads" upload:1.0
 ```
-
+# Enable kubernetes and ingress on katacode
+```
+minikube start --wait=false
+minikube addons enable ingress
+```
 # Kubernetes - Deploy by yaml
 
 
