@@ -22,3 +22,8 @@ Click Katacoda Dashboard tab for test upload file
 ```
 docker build -f ./deployment/docker/Dockerfile -t upload:1.0 .
 ```
+
+# Kubernetes - Deploy by yaml
+
+
+# Kubernetes - Deploy by helm
