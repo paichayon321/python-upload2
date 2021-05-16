@@ -57,6 +57,15 @@ helm version
 # Create helm chart
 ```
 helm create ./deployment/helm/upload
+```
+# Modify Chart
+```
+
+```
+
+
+# Run Helm chart
+```
 helm upgrade upload --dry-run --debug ./deployment/helm/upload --install
 helm upgrade upload ./deployment/helm/upload --install
 
