@@ -17,6 +17,7 @@ init-test-katacoda.sh
 ```
 
 Click Katacoda Dashboard tab for test upload file
+---
 
 # Build Docker image
 ```
