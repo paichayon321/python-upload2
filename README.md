@@ -86,3 +86,10 @@ helm upgrade upload --dry-run --debug ./deployment/helm/upload --install
 helm upgrade upload ./deployment/helm/upload --install
 
 ```
+
+# TLS ingress
+```
+openssl req -new -newkey rsa:4096 -days 3650 -nodes -x509 -subj '/C=TH/ST=TH/L=BKK/O=CTS/CN=mycert' -keyout key.pem -out cert.pem
+kubectl create secret tls upload-tls --key key.pem --cert cert.pem
+
+```
