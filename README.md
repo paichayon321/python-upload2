@@ -66,3 +66,6 @@ helm upgrade upload --dry-run --debug ./deployment/helm/upload --install
 
 
 # Kubernetes - Deploy by helm
+
+# Ingress
+https://kubernetes.io/docs/tasks/access-application-cluster/ingress-minikube/
