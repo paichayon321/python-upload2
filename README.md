@@ -10,7 +10,7 @@ cd python-upload2
 docker pull python:3.9.5
 docker run --privileged -p 30000:5000 --rm -e var1="value1" -it --volume "$(pwd):/app" python:3.9.5 bash -c "pip install flask && python /app/upload.py"
 
-docker run --privileged -p 30000:5000 --rm -e var1="value1" -it --volume "$(pwd):/app" python:3.9.5 bash -c "pip install flask && pip install pyopenssl && openssl req -new -newkey rsa:4096 -days 3650 -nodes -x509 -subj '/C=TH/ST=TH/L=BKK/O=CTS/CN=mycert' -keyout key.pem -out cert.pem  && python /app/upload2.py"
+docker run --privileged -p 30000:5000 --rm -e var1="value1" -it --volume "$(pwd):/app" python:3.9.5 bash -c "pip install flask && pip install pyopenssl && openssl req -new -newkey rsa:4096 -days 3650 -nodes -x509 -subj '/C=TH/ST=TH/L=BKK/O=CTS/CN=mycert' -keyout key.pem -out cert.pem  && python /app/upload.py"
  
 ```
 or after clone this project run initial script 
