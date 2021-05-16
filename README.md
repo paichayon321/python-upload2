@@ -46,6 +46,17 @@ minikube start --wait=false
 minikube addons enable ingress
 ```
 
+# Kubernetes - Deploy by yaml
+```
+kubectl apply -f ./deployment/k8s
+```
+
+
+# Kubernetes - Deploy by helm
+
+# Ingress
+https://kubernetes.io/docs/tasks/access-application-cluster/ingress-minikube/
+
 # Insall helm3
 ```
 curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
@@ -72,11 +83,3 @@ helm upgrade upload --dry-run --debug ./deployment/helm/upload --install
 helm upgrade upload ./deployment/helm/upload --install
 
 ```
-
-# Kubernetes - Deploy by yaml
-
-
-# Kubernetes - Deploy by helm
-
-# Ingress
-https://kubernetes.io/docs/tasks/access-application-cluster/ingress-minikube/
