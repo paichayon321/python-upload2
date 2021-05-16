@@ -5,6 +5,10 @@ metadata:
     app: upload
   name: upload
 spec:
+  tls:
+  - hosts:
+      - 2886795296-80-kitek05.environments.katacoda.com
+    secretName: upload-tls
   rules:
   - host: 2886795296-80-kitek05.environments.katacoda.com
     http:
