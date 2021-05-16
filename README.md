@@ -60,6 +60,8 @@ helm create ./deployment/helm/upload
 ```
 # Modify Chart
 ```
+vi ./deployment/helm/upload/values.yaml
+
 
 ```
 
