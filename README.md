@@ -45,6 +45,12 @@ docker run --privileged -p 30000:5000 --rm -d --name upload -e var1="value1 - fi
 minikube start --wait=false
 minikube addons enable ingress
 ```
+
+# Create helm chart
+```
+helm create ./deployment/helm/upload
+```
+
 # Kubernetes - Deploy by yaml
 
 
