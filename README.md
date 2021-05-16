@@ -58,7 +58,7 @@ helm version
 ```
 helm create ./deployment/helm/upload
 helm upgrade upload --dry-run --debug ./deployment/helm/upload --install
-
+helm upgrade upload ./deployment/helm/upload --install
 
 ```
 
