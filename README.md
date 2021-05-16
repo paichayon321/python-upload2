@@ -1,5 +1,5 @@
 # python-upload2
-Run test on katacoda
+This step below for Run test on katacoda as link below
 https://www.katacoda.com/courses/kubernetes/launch-single-node-cluster
 
 ```
