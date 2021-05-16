@@ -57,6 +57,7 @@ helm version
 # Create helm chart
 ```
 helm create ./deployment/helm/upload
+helm install upload --dry-run --debug ./deployment/helm/upload
 ```
 
 # Kubernetes - Deploy by yaml
