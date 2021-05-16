@@ -27,6 +27,8 @@ docker build -f ./deployment/docker/Dockerfile -t upload:1.0 .
 docker run --privileged -p 30000:5000 --rm -ti -e var1="value1" upload:1.0
 
 docker run --privileged -p 30000:5000 --rm -ti -e var1="value1" --volume "$(pwd)/uploads:/app/uploads" upload:1.0
+
+docker run --privileged -p 30000:5000 --rm -d --name upload -e var1="value1" --volume "$(pwd)/uploads:/app/uploads" upload:1.0
 ```
 
 # Kubernetes - Deploy by yaml
