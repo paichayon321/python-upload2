@@ -1,6 +1,10 @@
 import os
-from flask import Flask, flash, request, redirect, render_template
+from flask import Flask, flash, request, redirect, render_template, jsonify
 from werkzeug.utils import secure_filename
+
+import ssl
+context = ssl.SSLContext()
+context.load_cert_chain('cert.pem', 'key.pem') 
 
 app=Flask(__name__)
 
@@ -55,4 +59,4 @@ def upload_file():
 
 
 if __name__ == "__main__":
-    app.run(host = '0.0.0.0',port = 5000, debug = False)
+    app.run(host = '0.0.0.0',port = 5000, debug = False, ssl_context = context)
