@@ -34,7 +34,10 @@ spec:
         app.kubernetes.io/name: upload
     spec:
       containers:
-      - image: nginx:1.16.0
+      - image: upload:1.0
+        env:
+        - name: "var1"
+          value: "run from kuber"
         imagePullPolicy: IfNotPresent
         livenessProbe:
           failureThreshold: 3
@@ -47,7 +50,7 @@ spec:
           timeoutSeconds: 1
         name: upload
         ports:
-        - containerPort: 80
+        - containerPort: 5000
           name: http
           protocol: TCP
         readinessProbe:
