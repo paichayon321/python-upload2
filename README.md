@@ -2,6 +2,8 @@
 This step below for Run test on katacoda at
 https://www.katacoda.com/courses/kubernetes/launch-single-node-cluster
 
+Copy script below on katacoda console for test
+
 ```
 git clone https://github.com/paichayon321/python-upload2.git
 cd python-upload2
@@ -10,7 +12,6 @@ docker run --privileged -p 30000:5000 --rm -e var1="value1" -it --volume "$(pwd)
 ```
 or after clone this project run initial script 
 ```
-git clone https://github.com/paichayon321/python-upload2.git
 cd python-upload2
 init-test-katacoda.sh
 ```
