@@ -15,3 +15,6 @@ or after clone this project run initial script
 cd python-upload2
 init-test-katacoda.sh
 ```
+
+Click Dashboard tab for test upload file
+
