@@ -46,6 +46,14 @@ minikube start --wait=false
 minikube addons enable ingress
 ```
 
+# Insall helm3
+```
+curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
+mv /usr/bin/helm /usr/bin/helm2
+cp /usr/local/bin/helm /usr/bin/helm
+helm version
+```
+
 # Create helm chart
 ```
 helm create ./deployment/helm/upload
