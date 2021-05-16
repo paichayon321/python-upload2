@@ -2,25 +2,16 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    deployment.kubernetes.io/revision: "1"
-    meta.helm.sh/release-name: upload
-    meta.helm.sh/release-namespace: default
   labels:
-    app.kubernetes.io/instance: upload
-    app.kubernetes.io/managed-by: Helm
-    app.kubernetes.io/name: upload
-    app.kubernetes.io/version: 1.16.0
-    helm.sh/chart: upload-0.1.0
+    app: upload
   name: upload
-  namespace: default
 spec:
   progressDeadlineSeconds: 600
   replicas: 1
   revisionHistoryLimit: 10
   selector:
     matchLabels:
-      app.kubernetes.io/instance: upload
-      app.kubernetes.io/name: upload
+      app: upload
   strategy:
     rollingUpdate:
       maxSurge: 25%
@@ -28,48 +19,18 @@ spec:
     type: RollingUpdate
   template:
     metadata:
-      creationTimestamp: null
       labels:
-        app.kubernetes.io/instance: upload
-        app.kubernetes.io/name: upload
+        app: upload
     spec:
       containers:
       - image: upload:1.0
+        imagePullPolicy: IfNotPresent
+        name: upload
         env:
         - name: "var1"
           value: "run from kuber"
-        imagePullPolicy: IfNotPresent
-        livenessProbe:
-          failureThreshold: 3
-          httpGet:
-            path: /
-            port: http
-            scheme: HTTP
-          periodSeconds: 10
-          successThreshold: 1
-          timeoutSeconds: 1
-        name: upload
-        ports:
-        - containerPort: 5000
-          name: http
-          protocol: TCP
-        readinessProbe:
-          failureThreshold: 3
-          httpGet:
-            path: /
-            port: http
-            scheme: HTTP
-          periodSeconds: 10
-          successThreshold: 1
-          timeoutSeconds: 1
-        resources: {}
-        securityContext: {}
-        terminationMessagePath: /dev/termination-log
-        terminationMessagePolicy: File
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       schedulerName: default-scheduler
       securityContext: {}
-      serviceAccount: upload
-      serviceAccountName: upload
       terminationGracePeriodSeconds: 30
