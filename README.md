@@ -20,5 +20,5 @@ Click Katacoda Dashboard tab for test upload file
 
 # Build Docker image
 ```
-docker build -f ./docker/Dockerfile -t upload:1.0 .
+docker build -f ./deployment/docker/Dockerfile -t upload:1.0 .
 ```
