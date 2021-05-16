@@ -16,5 +16,5 @@ cd python-upload2
 init-test-katacoda.sh
 ```
 
-Click Dashboard tab for test upload file
+Click Katacoda Dashboard tab for test upload file
 
