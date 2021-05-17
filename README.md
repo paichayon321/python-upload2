@@ -93,3 +93,33 @@ openssl req -new -newkey rsa:4096 -days 3650 -nodes -x509 -subj '/C=TH/ST=TH/L=B
 kubectl create secret tls upload-tls --key key.pem --cert cert.pem
 
 ```
+
+# Ingress yaml for TLS
+Add   
+annotations:
+  nginx.ingress.kubernetes.io/backend-protocol: HTTPS
+
+```
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  labels:
+    app: upload
+  name: upload
+  annotations:
+    nginx.ingress.kubernetes.io/backend-protocol: HTTPS
+spec:
+  tls:
+  - hosts:
+      - 2886795296-80-kitek05.environments.katacoda.com
+    secretName: upload-tls
+  rules:
+  - host: 2886795296-80-kitek05.environments.katacoda.com
+    http:
+      paths:
+      - backend:
+          serviceName: upload
+          servicePort: 5000
+        path: /
+        pathType: Exact
+```
