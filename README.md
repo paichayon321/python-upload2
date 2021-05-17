@@ -97,6 +97,7 @@ kubectl create secret tls upload-tls --key key.pem --cert cert.pem
 # Ingress yaml for TLS
 Add   
 annotations:
+
   nginx.ingress.kubernetes.io/backend-protocol: HTTPS
 
 ```
