@@ -4,6 +4,8 @@ metadata:
   labels:
     app: upload
   name: upload
+  annotations:
+    nginx.ingress.kubernetes.io/backend-protocol: HTTPS
 spec:
   tls:
   - hosts:
