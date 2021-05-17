@@ -19,3 +19,4 @@ spec:
           serviceName: upload
           servicePort: 5000
         path: /
+        pathType: Exact
